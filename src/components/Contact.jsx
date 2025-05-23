@@ -29,26 +29,34 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
     try {
-      const response = await fetch("http://localhost:5000/contact", {
+      // --- MULAI PERUBAHAN DI SINI ---
+      const response = await fetch("https://formspree.io/f/xvganlev", {
+        // <--- GANTI DENGAN ENDPOINT FORMSPREE ANDA!
         method: "POST",
         headers: {
-          "Content-Type": "application/json;charset=utf-8",
+          "Content-Type": "application/json", // Penting: ini harus application/json untuk Formspree
+          Accept: "application/json", // Penting: ini juga harus ada
         },
         body: JSON.stringify(formDetails),
       });
+      // --- AKHIR PERUBAHAN ---
 
-      const result = await response.json();
+      const result = await response.json(); // Formspree juga mengirimkan respons JSON
       setButtonText("Send");
-      setFormDetails(formInitialDetails);
+      setFormDetails(formInitialDetails); // Reset form
 
-      if (result.code === 200) {
+      if (response.ok) {
+        // Formspree mengembalikan response.ok (true untuk 200-299 status) jika sukses
         toast.success("Message sent successfully!");
       } else {
+        // Jika ada error dari Formspree (misal: spam detection, dll.)
         toast.error("Something went wrong, please try again later.");
+        console.error("Formspree Error:", result); // Log error dari Formspree
       }
     } catch (error) {
       setButtonText("Send");
       toast.error("Failed to send message.");
+      console.error("Fetch Error:", error); // Log error dari fetch API
     }
   };
 
