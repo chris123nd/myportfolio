@@ -24,7 +24,7 @@ const website = [
   {
     title: "My Portfolio",
     imgUrl: web2,
-    url: "https://github.com/HandikaRonny/Rumata-Coffee-Website-using-PHP-Native",
+    url: "https://github.com/chris123nd/myportfolio",
     category: "Website",
     stack: ["react js", "html", "js", "css", "bootstrap"],
   },
