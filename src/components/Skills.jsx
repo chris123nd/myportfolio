@@ -48,6 +48,11 @@ export const Skills = () => {
                   <img src="https://img.icons8.com/color/96/000000/javascript.png" alt="" />
                   <h5>JavaScript</h5>
                 </div>
+                <div class="item">
+                  <img src="https://img.icons8.com/color/96/000000/vue-js.png" alt="Vue.js Logo" />
+                  <h5>Vue.js</h5>
+                </div>
+
                 {/* <div className="item">
                   <img src="https://img.icons8.com/color/96/000000/nodejs.png" alt="" />
                   <h5>Node JS</h5>

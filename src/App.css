@@ -597,7 +597,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-body span {
   display: block;
-  color: rgb(red, green, blue);
+  color: rgb(rgb(0, 0, 0), rgb(255, 255, 255), rgb(238, 255, 4));
   font-size: 16px;
   text-decoration: none;
 }
@@ -609,7 +609,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-body h4 {
   margin: 0px;
   font-size: 28px;
-  background: linear-gradient(45deg, #ff9a00, #d0de21, #4fdc4a, #3fdad8, #2fc9e2, #1c7fee, #5f15f2, #ba0cf8, #fb07d9, #ff0000);
+  background: linear-gradient(45deg, #ff0000, #0dff00, #001eff);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -627,19 +627,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @keyframes rgbEffect {
   0% {
-    box-shadow: 0 0 5px #ff0000;
+    box-shadow: 0 0 5px #00ffee;
   }
 
   33% {
-    box-shadow: 0 0 5px #00ff00;
+    box-shadow: 0 0 5px #00ffee;
   }
 
   66% {
-    box-shadow: 0 0 5px #0000ff;
+    box-shadow: 0 0 5px #00ffee;
   }
 
   100% {
-    box-shadow: 0 0 5px #ff0000;
+    box-shadow: 0 0 5px #00ffee;
   }
 }
 
@@ -658,7 +658,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .rgb::after {
   content: "";
-  background: linear-gradient(45deg, #ff0000 0%, #ff9a00 10%, #d0de21 20%, #4fdc4a 30%, #3fdad8 40%, #2fc9e2 50%, #1c7fee 60%, #5f15f2 70%, #ba0cf8 80%, #fb07d9 90%, #ff0000 100%) repeat 0% 0% / 300% 100%;
+  background: linear-gradient(45deg, #01ddff 0%, #01ddff 10%, #01ddff 20%, #01ddff 30%, #01ddff 40%, #01ddff 50%, #01ddff 60%, #01ddff 70%, #01ddff 80%, #01ddff 90%, #01ddff 100%) repeat 0% 0% / 300% 100%;
   position: absolute;
   inset: -3px;
   animation: rgb 6s linear infinite;
