@@ -30,14 +30,9 @@ export const Skills = () => {
           <Col xl={12}>
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
-              <p>I am proficient in HTML, CSS, JavaScript (Node.js), PHP, Java, Dart, Go, and Python, as well as frameworks such as Laravel, React JS, and Flutter.</p>
               <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 <div className="item">
-                  <img
-                    src="
-                                    https://img.icons8.com/color/96/000000/html-5.png"
-                    alt=""
-                  />
+                  <img src="https://img.icons8.com/color/96/000000/html-5.png" alt="" />
                   <h5>HTML</h5>
                 </div>
                 <div className="item">
@@ -50,9 +45,8 @@ export const Skills = () => {
                 </div>
                 <div class="item">
                   <img src="https://img.icons8.com/color/96/000000/vue-js.png" alt="Vue.js Logo" />
-                  <h5>Vue.js</h5>
+                  <h5>Vue Js</h5>
                 </div>
-
                 {/* <div className="item">
                   <img src="https://img.icons8.com/color/96/000000/nodejs.png" alt="" />
                   <h5>Node JS</h5>

@@ -29,24 +29,20 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
     try {
-      // --- MULAI PERUBAHAN DI SINI ---
       const response = await fetch("https://formspree.io/f/xvganlev", {
-        // <--- GANTI DENGAN ENDPOINT FORMSPREE ANDA!
         method: "POST",
         headers: {
-          "Content-Type": "application/json", // Penting: ini harus application/json untuk Formspree
-          Accept: "application/json", // Penting: ini juga harus ada
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(formDetails),
       });
-      // --- AKHIR PERUBAHAN ---
 
-      const result = await response.json(); // Formspree juga mengirimkan respons JSON
+      const result = await response.json();
       setButtonText("Send");
-      setFormDetails(formInitialDetails); // Reset form
+      setFormDetails(formInitialDetails);
 
       if (response.ok) {
-        // Formspree mengembalikan response.ok (true untuk 200-299 status) jika sukses
         toast.success("Message sent successfully!");
       } else {
         // Jika ada error dari Formspree (misal: spam detection, dll.)
